@@ -1,3 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root "blog/posts#index"
+
+  namespace :author do
+    resources :posts
+  end
+
+  scope module: 'blog' do
+    get 'about' => 'pages#about'
+    get 'contact' => 'pages#contact'
+    get 'posts' => 'posts#index'
+    get 'posts/:id' => 'posts#show', as: :post
+  end
+  
 end
