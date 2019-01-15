@@ -9,15 +9,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
     <script>tinymce.init({ selector:'textarea#post_body' });</script>
-    <script src="/application-cbd3cd4.js" defer></script>
+    
   </head>
 
   <body>
     <%= render 'layouts/navbar'%>
-      <% if notice | alert %>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-      <% end %>
+      
     <div class="container <%= controller_name %> <%=action_name %>">
       <%= yield %>
     </div>
