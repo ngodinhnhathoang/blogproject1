@@ -4,13 +4,13 @@ module Blog
     # GET /posts
     # GET /posts.json
     def index
-        @posts = Post.all
+      @posts = Post.published.list_for(params[:page], params[:tag])
     end
 
     # GET /posts/1
     # GET /posts/1.json
     def show
-      @post = Post.friendly.find(params[:id])
+      @post = Post.published.friendly.find(params[:id])
     end
 
   end

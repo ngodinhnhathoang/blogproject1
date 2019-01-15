@@ -1,6 +1,8 @@
 <% provide(:page_title, "All post") %>
 <% provide(:blog_active, "active") %>
-
+<div class=" flickr_pagination">
+  <%= will_paginate @posts, container: false %>
+</div>
 <div class="row">
   <%= render @posts %>
 </div>
