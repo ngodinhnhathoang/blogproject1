@@ -47,7 +47,10 @@ module Authors
           end
           end
       end
-  
+      
+      def display_name
+        current_author.name
+      end
       # PATCH/PUT /posts/1
       # PATCH/PUT /posts/1.json
       def update
