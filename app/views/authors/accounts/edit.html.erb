@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-block">
+          <div class="card-title">
+            Basic Infor
+          </div>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <div class="field">
+              <%= label_tag :name %>
+              <%= text_field_tag :name, nil, class: 'form-control' %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="field">
+              <%= label_tag :email %>
+              <%= email_field_tag :email, nil, class: 'form-control' %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="field">
+              <%= label_tag :bio %>
+              <%= text_field_tag :bio, nil, class: 'form-control' %>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-block">
+          <div class="card-title">
+            Change Password
+          </div>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <div class="field">
+              <%= label_tag :current_password %>
+              <%= password_field_tag :current_password, nil, class: 'form-control' %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="field">
+              <%= label_tag :new_password %>
+              <%= password_field_tag :new_password, nil, class: 'form-control' %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="field">
+              <%= label_tag :new_password_confirmation %>
+              <%= password_field_tag :new_password_confirmation, nil, class: 'form-control' %>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
