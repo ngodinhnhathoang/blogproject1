@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.4.2'
+ruby '2.5.3'
 
 gem 'rails', '~> 5.2.2'
 gem 'puma', '~> 3.11'
@@ -44,7 +44,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg', '0.20.0'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

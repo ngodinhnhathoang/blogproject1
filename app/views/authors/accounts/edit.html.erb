@@ -1,8 +1,8 @@
 <div class="row">
   <!-- Basic info section -->
-  <%= form_tag authors_infor_path, method: :put do %>
+  <%= form_tag authors_infor_path(@author), method: :put do %>
     <%= fields_for :author do |f| %>
-      <div class="col-md-6">
+      <div class="col-md-16">
         <div class="card">
           <div class="card-block">
             <div class="card-title">
@@ -28,7 +28,7 @@
             <li class="list-group-item">
               <div class="field">
                 <%= f.label :bio %>
-                <%= f.text_area :bio, value: nil, class: 'form-control' %>
+                <%= f.text_area :bio, value: current_author.bio, class: 'form-control' %>
               </div>
             </li>
             <li class='list-group-item'>
@@ -43,7 +43,7 @@
   <!-- Change password section -->
   <%= form_tag authors_password_path, method: :put do %>
     <%= fields_for :author do |f| %>
-      <div class="col-md-6">
+      <div class="col-md-16">
         <div class="card">
           <div class="card-block">
             <div class="card-title">
